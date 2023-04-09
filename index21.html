@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="style21.css">
+        <title> Video Hub</title>
+    </head>
+        <body>
+            
+            <div class="container">
+
+                <div class="heading">Video Hub</div>
+
+                <div class="video-container">
+
+                <div class="video">
+
+                    <video src="videos/Wildlife.mp4" unmuted controls 
+                    poster="images/bg.jpg"></video>
+
+                </div>
+                <div class="video">
+
+                    <video src="videos/Video3.mp4" unmuted controls poster="images/bg.jpg"></video>
+
+                </div>
+                
+                <div class="video">
+
+                    <video src="videos/rareanimals.mp4" unmuted controls 
+                    poster="images/bg.jpg"></video>
+
+                </div>
+                <div class="video">
+
+                    <video src="videos/Ve Maahi.mp4" unmuted controls
+                    poster="images/bg.jpg"></video>
+
+                </div>
+                <div class="video">
+
+                    <video src="videos/Gallan.mp4" unmuted controls
+                    poster="images/bg.jpg"></video>
+
+                </div>
+                <div class="video">
+
+                    <video src="videos/Zindagi.mp4" unmuted controls
+                    poster="images/bg.jpg"></video>
+
+                </div>
+                <div class="video">
+
+                    <video src="videos/Naina.mp4" unmuted controls
+                    poster="images/bg.jpg"></video>
+
+                </div>
+                <div class="video">
+
+                    <video src="videos/Laapata.mp4" unmuted controls
+                    poster="images/bg.jpg"></video>
+
+                </div>
+                <div class="video">
+
+                    <video src="videos/Tu Jo Mila.mp4" unmuted controls
+                    poster="images/bg.jpg"></video>
+
+                </div>
+                <div class="video">
+
+                    <video src="videos/Funnybean.mp4" unmuted controls poster="images/bg.jpg"></video>
+
+                </div>
+                <div class="video">
+
+                    <video src="videos/Mrbean.mp4" unmuted controls
+                    poster="images/bg.jpg"></video>
+
+                </div>
+                <div class="video">
+
+                    <video src="videos/raju3.mp4" unmuted controls
+                    poster="images/bg.jpg"></video>
+
+                </div>
+                <div class="video">
+
+                    <video src="videos/rajucom.mp4" unmuted controls poster="images/bg.jpg"></video>
+
+                </div>
+                <div class="video">
+
+                    <video src="videos/rajufunny.mp4" unmuted controls poster="images/bg.jpg"></video>
+
+                </div>
+                <div class="video">
+
+                    <video src="videos/Video4.mp4" unmuted controls poster="images/bg.jpg"></video>
+
+                </div>
+
+                </div>
+        </div>
+        <script>
+            var video = document.querySelectorAll('video')
+            video.forEach(play => play.addEventListener('click',()=>{
+                play.classList.toggle('active');
+
+                if(play.pause){
+                    play.play();                    
+                }else{
+                    play.pause()
+                    play.currentTime = 0;
+                }
+            }));
+        </script>
+        </body>
+</html>

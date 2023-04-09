@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- APlayer CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css"/>
+
+    <title>Music Hub</title>
+    <style>
+    	body{
+    		background-color: aquamarine;
+    		font-family: Open sans;
+    	}
+    	img{
+    		width: 100%;
+    		min-height: 250px;
+			max-height: 250px;
+    	}
+    	.main{
+    		padding: 40px 0;
+    	}
+    	.col-md-3{
+    		margin-bottom: 40px;
+    	}
+    	.album-poster{
+    		position: relative;
+    		display: block;
+    		border-radius: 7px;
+    		overflow: hidden;
+    		box-shadow: 0 15px 35px #3d2173a1;
+    		transition: all ease 0.4s;
+    	}
+    	.album-poster:hover{
+    		box-shadow: none;
+    		transform: scale(0.98) translateY(5px);
+    	}
+    	h3{
+    		font-size: 34px;
+    		margin-bottom: 34px;
+    		border-bottom: 4px solid #e6e6e6;
+    		padding-bottom: 15px;
+    	}
+    	p{
+    		font-size: 15px;
+    	}
+    	h4{
+    		font-size: 16px;
+    		text-transform: uppercase;
+    		margin-top: 15px;
+    		font-weight: 700;
+    	}
+		
+
+		/*default is hide music player*/
+		#aplayer{
+			position: fixed;
+			bottom: -100%;
+			left: 0;
+			width: 100%;
+			margin: 0;
+			box-shadow: 0 -2px 2px #dadada;
+			background-color: #fff;
+			transition: all ease 0.5s;
+		}
+		#aplayer.showPlayer{
+			bottom: 0;
+		}
+
+		
+		/*MUSIC PLAYER CUSTOMIZING STYLE*/
+		span{
+			color: #000 !important;
+			font-size: 16px;
+		}
+		.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded{
+			background: #e0e0e0;
+    		height: 4px;
+		}
+		.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played{
+			height: 4px;
+			background-color: #2196F3 !important;
+		}
+		.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb{
+			background-color: #2196F3 !important;
+		}
+
+		.aplayer .aplayer-icon{
+			width: 20px;
+			height: 20px;
+		}
+		.aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path {
+		    fill: #000;
+		}
+		.aplayer .aplayer-info .aplayer-music{
+			margin-bottom: 5px;
+		}
+
+
+    </style>
+ 	</head>
+	<body>
+
+<div class="main">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Our Collections</h3>
+			</div>
+			<div class="col-md-3">
+				<a href="javascript:void();" class="album-poster" data-switch="0">
+					<img src="images/bg.jpg" alt="">
+				</a>
+				<h4>BROWN-MUNDE</h4>
+				<p>ALBUM 2020</p>
+			</div>
+			<div class="col-md-3">
+				<a href="##" class="album-poster" data-switch="1">
+					<img src="images/golmaal3.jpg" alt="">
+				</a>
+				<h4>Aale</h4>
+				<p>Golmaal-3</p>
+			</div>
+			<div class="col-md-3">
+				<a href="##" class="album-poster" data-switch="2">
+					<img src="images/3idiots.png" alt="">
+				</a>
+				<h4>Give Me Some Sunshine</h4>
+				<p>3-Idiots</p>
+			</div>
+
+			<div class="col-md-3">
+				<a href="##" class="album-poster" data-switch="3">
+					<img src="images/gtasa.jpg" alt="">
+				</a>
+				<h4>San-Andreas Theme</h4>
+				<p>Instrumental</p>
+			</div></div>
+			<div class="row">
+			<div class="col-md-12">
+				<h3>Romantic Hits</h3>
+			</div>
+			<div class="col-md-3">
+				<a href="##" class="album-poster" data-switch="4">
+					<img src="images/rk.jpg" alt="">
+				</a>
+				<h4>PHIR-SE-UD-CHLA</h4>
+				<p>Rockstar</p>
+			</div>
+			<div class="col-md-3">
+				<a href="##" class="album-poster" data-switch="5">
+					<img src="images/kts.jpg" height= 100 alt="">
+				</a>
+				<h4>Zindagi</h4>
+				<p>Kites</p>
+			</div>
+			<div class="col-md-3">
+				<a href="##" class="album-poster" data-switch="6">
+					<img src="images/avr.jpg" height= 100; alt="">
+				</a>
+				<h4>Raabta</h4>
+				<p>Agent Vinod</p>
+			</div>
+			<div class="col-md-3">
+				<a href="##" class="album-poster" data-switch="7">
+					<img src="images/ks.jpg" alt="">
+				</a>
+				<h4>Tujhe Kitna Chahne Lage</h4>
+				<p>Kabir Singh</p>
+			</div></div>
+			<div class="row">
+			<div class="col-md-12">
+				<h3>Hum Hindustani</h3>
+			</div>
+			<div class="col-md-3">
+				<a href="##" class="album-poster" data-switch="8">
+					<img src="images/india.jpg" alt="">
+				</a>
+				<h4>Chak-De Inida</h4>
+				<p>Chak-De Inida</p>
+			</div>
+			<div class="col-md-3">
+				<a href="##" class="album-poster" data-switch="9">
+					<img src="images/ind2.jpg" alt="">
+				</a>
+				<h4>Maula Mere</h4>
+				<p>Chak-De India</p>
+			</div>
+			<div class="col-md-3">
+				<a href="##" class="album-poster" data-switch="10">
+					<img src="images/india.jpg" alt="">
+				</a>
+				<h4>Maa Tujhe Salam</h4>
+				<p>ALBUM</p>
+			</div>
+			<div class="col-md-3">
+				<a href="##" class="album-poster" data-switch="11">
+					<img src="images/ind2.jpg" alt="">
+				</a>
+				<h4>Badal Pe Paaun Hai</h4>
+				<p>Chak-De India</p>
+			</div></div>
+			<div class="row">
+			<div class="col-md-12">
+				<h3>Motivational Mix</h3>
+			</div>
+			<div class="col-md-3">
+				<a href="##" class="album-poster" data-switch="12">
+					<img src="images/id.jpg" alt="">
+				</a>
+				<h4>I was Broken</h4>
+				<p>Imagine Dragons</p>
+			</div>
+			<div class="col-md-3">
+				<a href="##" class="album-poster" data-switch="13">
+					<img src="images/backgroundc.jpeg" alt="">
+				</a>
+				<h4>Recreation Hub</h4>
+				<p>Instrumental</p>
+			</div>
+			<div class="col-md-3">
+				<a href="##" class="album-poster" data-switch="14">
+					<img src="images/dm.jpg" alt="">
+				</a>
+				<h4>De Mauka Zindagi</h4>
+				<p>Tvf-Aspirants</p>
+			</div>
+			<div class="col-md-3">
+				<a href="##" class="album-poster" data-switch="15">
+					<img src="images/bg.jpg">
+				</a>
+				<h4>Beats Up</h4>
+				<p>Unknown</p>
+			</div></div>
+			<div class="row">
+			<div class="col-md-12">
+				<h3>Bollywood Retro</h3>
+			</div>
+			<div class="col-md-3">
+				<a href="##" class="album-poster" data-switch="16">
+					<img src="images/img1.jpg" alt="">
+				</a>
+				<h4>Lag Ja Gale</h4>
+				<p>90's Gold</p>
+			</div>
+			<div class="col-md-3">
+				<a href="##" class="album-poster" data-switch="17">
+					<img src="images/bg.jpg" height= 100; alt="">
+				</a>
+				<h4>Jab Koi Baat</h4>
+				<p>Kumar Sanu</p>
+			</div>
+			<div class="col-md-3">
+				<a href="##" class="album-poster" data-switch="18">
+					<img src="images/bg.jpg" height= 100; alt="">
+				</a>
+				<h4>Kahi Door Jab</h4>
+				<p>Mukesh</p>
+			</div>
+			<div class="col-md-3">
+				<a href="##" class="album-poster" data-switch="19">
+					<img src="images/bg.jpg" height= 100; alt="">
+				</a>
+				<h4>Mai Pal Do Pal</h4>
+				<p>Kabhi Kabhi</p>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Releasing Soon</h3>
+			</div>
+			<div class="col-md-2">
+				<a href="##" class="album-poster">
+					<img src="images/bg.jpg" alt="">
+				</a>
+				<h4>Invisible</h4>
+			</div>
+			<div class="col-md-2">
+				<a href="##" class="album-poster">
+					<img src="images/bg.jpg" alt="">
+				</a>
+				<h4>Seeti Maar</h4>
+			</div>
+			<div class="col-md-2">
+				<a href="##" class="album-poster">
+					<img src="images/bg.jpg" alt="">
+				</a>
+				<h4>Paradise</h4>
+			</div>
+			
+			<div class="col-md-2">
+				<a href="##" class="album-poster">
+					<img src="images/bg.jpg" alt="">
+				</a>
+				<h4>Rehguzar</h4>
+			</div>
+			<div class="col-md-2">
+				<a href="##" class="album-poster">
+					<img src="images/bg.jpg" alt="">
+				</a>
+				<h4>Radhe</h4>
+			</div>
+			<div class="col-md-2">
+				<a href="##" class="album-poster">
+					<img src="images/bg.jpg" alt="">
+				</a>
+				<h4>Pink City</h4>
+			</div>
+		</div>
+
+
+	</div>
+</div>
+
+	<div id="aplayer"></div>
+
+	<!-- Jquery Link -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<!-- Bootstrap Link -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<!-- APlayer Jquery link -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>	
+
+	<script>
+
+
+		// NOW I CLICK album-poster TO GET CURRENT SONG ID
+		$(".album-poster").on('click', function(e){
+			var dataSwitchId = $(this).attr('data-switch');
+			//console.log(dataSwitchId);
+
+			// and now i use aplayer switch function see
+			ap.list.switch(dataSwitchId); //this is static id but i use dynamic 
+
+			// aplayer play function
+			// when i click any song to play
+			ap.play();
+
+			// click to slideUp player see
+			$("#aplayer").addClass('showPlayer');
+		});
+
+		const ap = new APlayer({
+		    container: document.getElementById('aplayer'),
+		    listFolded: true,
+		    audio: [
+		    {
+		        name: 'Brown_munde',
+		        artist: 'Album_2020',
+		        url: 'sounds/song1.mp3.m4a',
+		        cover: 'https://ringtonedownload.best/wp-content/uploads/2021/03/brown-munde-ringtone-download-ap-dhillon-Punjabi-song-1200x677.jpg'
+		    },
+			{
+		        name: 'Aale',  // SONG NAME
+		        artist: 'Golmaal_3', //ARTIST NAME
+		        url: 'sounds/Aale.mp3', // PATH NAME AND SONG URL
+		        cover: 'https://i.pinimg.com/originals/3d/88/1c/3d881c03e3f397c684df3dcdf930f200.jpg' // COVER IMAGE
+		    },
+			{
+				name: 'Give Me Some',
+				artist: '3-Idiots',
+				url: 'sounds/Give Me Some.mp3',
+				cover: 'https://images.cinemaexpress.com/uploads/user/imagelibrary/2020/5/1/original/3_Idiots.PNG',
+			},
+			{
+				name: 'San-Andreas',
+				artist: 'Instrumental',
+				url: 'sounds/gta Sa.mp3',
+				cover: 'https://wallpapercave.com/wp/wp1838918.jpg',
+			},
+			{
+				name: 'Phir_se_ud_chla',
+				artist: 'Rockstar',
+				url: 'sounds/song5.mp3.mp3',
+				cover: 'https://cdn.wallpapersafari.com/47/77/IyQDBJ.jpg',
+			},
+			{
+				name: 'Zindagi',
+				artist: 'Kites',
+				url: 'sounds/Zindagi.mp3',
+				cover: 'https://www.rvcj.com/wp-content/uploads/2017/08/kites-poster.jpg',
+			},
+			{
+				name: 'Raabta',
+				artist: 'Agent Vinod',
+				url: 'sounds/Raabta.mp3',
+				cover: 'https://m.media-amazon.com/images/M/MV5BZDM5MTM5OTYtMWUxMC00NjcxLWEyNzAtYjIwYjVhYjAyZDc3XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg',
+			},
+			{
+				name: 'Tujhe Kitna Chahne',
+				artist: 'Kabir Singh',
+				url: 'sounds/Tujhe Kitna Chahne.mp3',
+				cover: 'https://techymaster.com/wp-content/uploads/2019/07/pic_poster_kabir_sin_t27AZ.jpg',
+			},
+			{
+				name: 'Chak-De India',
+				artist: 'Chak-De India',
+				url: 'sounds/Chak De India.mp3',
+				cover: 'https://i.pinimg.com/originals/8c/34/5d/8c345d9dc854b10f87a270ee42b3f78f.jpg',
+			},
+			{
+				name: 'Maula Mere',
+				artist: 'Chak-De India',
+				url: 'sounds/Maula Mere.mp3',
+				cover: 'https://i.pinimg.com/originals/8c/34/5d/8c345d9dc854b10f87a270ee42b3f78f.jpg',
+			},
+			{
+				name: 'Maa Tujhe Salam',
+				artist: 'A.R Rehman',
+				url: 'sounds/Maa Tujhe Salam.mp3',
+				cover: 'https://i.pinimg.com/originals/8c/34/5d/8c345d9dc854b10f87a270ee42b3f78f.jpg',
+			},
+			{
+				name: 'Badal Pe Paaun',
+				artist: 'Chak-De India',
+				url: 'sounds/Badal Pe.mp3',
+				cover: 'https://i.pinimg.com/originals/8c/34/5d/8c345d9dc854b10f87a270ee42b3f78f.jpg',
+			},
+			{
+				name: 'I was Broken',
+				artist: 'Imagine Dragons',
+				url: 'sounds/I was broken.mp3',
+				cover: 'data:image/jpeg;base64,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',
+			},
+			{
+				name: 'Recreation Hub',
+				artist: 'Instrumental',
+				url: 'sounds/Recreation Hub.mp3',
+				cover: 'https://images.pexels.com/photos/1370545/pexels-photo-1370545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+			},
+			{
+				name: 'De Mauka Zindagi',
+				artist: 'Tvf-Aspirants',
+				url: 'sounds/De Mauka.mp3',
+				cover: 'https://www.quirkybyte.com/wp-content/uploads/2021/05/5-25.jpg',
+			},
+			{
+				name: 'Beats Up',
+				artist: 'Unknown',
+				url: 'sounds/song2.mp3.m4a',
+				cover: 'https://images.pexels.com/photos/1370545/pexels-photo-1370545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+			},
+			{
+				name: 'Lag Jaa Gale',
+				artist: '90s',
+				url: 'sounds/Lag Ja Gale.mp3',
+				cover: 'https://images.pexels.com/photos/1370545/pexels-photo-1370545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+			},
+			{
+				name: 'Jab Koi Baat',
+				artist: 'Kumar Sanu',
+				url: 'sounds/Jab Koi Baat.mp3',
+				cover: 'https://images.pexels.com/photos/1370545/pexels-photo-1370545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+			},
+			{
+				name: 'Kahin Door Jab',
+				artist: 'Mukesh',
+				url: 'sounds/Kahin Door.mp3',
+				cover: 'https://images.pexels.com/photos/1370545/pexels-photo-1370545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+			},
+			{
+				name: 'Mai Pal Do pal',
+				artist: 'Kabhi Kabhi',
+				url: 'sounds/Mein Pal Do Pal Ka.mp3',
+				cover: 'https://images.pexels.com/photos/1370545/pexels-photo-1370545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+			},
+
+
+		    ]
+		});
+	</script>
+
+	</body>
+</html>
